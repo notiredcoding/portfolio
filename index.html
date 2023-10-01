@@ -121,22 +121,23 @@
             </div>
         </div>
         <div class="right-contact">
-            <form action="">
+            <form name="submit-to-google-sheet" action="">
                 <h1 style="text-align: center; margin: 10px 0;">Contact Me</h1>
                 <div class="control-form">
                     <label for="name">Name</label>
-                    <input type="text" id="name" name="name" placeholder="Dims Nur" required autocomplete="off">
+                    <input type="text" id="name" name="Name" placeholder="Dims Nur" required autocomplete="off">
                 </div>
                 <div class="control-form">
                     <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="dimsnur@world.com" required autocomplete="off">
+                    <input type="email" id="email" name="Email" placeholder="dimsnur@world.com" required autocomplete="off">
                 </div>
                 <div class="control-form">
                     <label for="message">Message</label>
-                    <textarea name="message" id="message" cols="30" rows="10">I want to hire you</textarea>
+                    <textarea name="Message" id="message" cols="30" rows="10">I want to hire you</textarea>
                 </div>
                 <div class="control-form">
                     <input type="submit" value="Send Message">
+                    <span id="msg"></span>
                 </div>
             </form>
         </div>

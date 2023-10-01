@@ -84,3 +84,21 @@ function erase() {
 }
 
 type();
+
+//Form Message to Google Excel Form
+const scriptURL = 'https://script.google.com/macros/s/AKfycbx5CWxlvwhlX86hDFt6WnmRSlq0llko6ZDUfPtbY9r6ca7hOBfyXPpMsyvQ6qIIoiOR/exec'
+  const form = document.forms['submit-to-google-sheet'];
+  const msg = document.getElementById('msg');
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        msg.innerHTML = "Send Message Succesfully";
+        setTimeout(function () {
+          msg.innerText = '';
+        }, 5000)
+        form.reset();
+      })
+      .catch(error => console.error('Error!', error.message))
+  })

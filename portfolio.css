@@ -215,6 +215,7 @@ nav a {
 
 .img-about img {
     width: 200px;
+    border-radius: 15px;
     height: auto;
 }
 
@@ -224,7 +225,7 @@ nav a {
 }
 
 .text-about h1 {
-    font-size: 30px; 
+    font-size: 60px; 
     margin-bottom: 20px; 
 }
 
@@ -321,7 +322,7 @@ nav a {
 }
 
 #skill h1 {
-    font-size: 24px;
+    font-size: 60px;
     margin-bottom: 20px;
 }
 
@@ -347,7 +348,7 @@ nav a {
 }
 
 #portfolio h1 {
-    font-size: 24px;
+    font-size: 60px;
     margin-bottom: 20px;
 }
 
@@ -492,6 +493,12 @@ input[type="submit"] {
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
+}
+
+#msg {
+    display: block;
+    margin: 10px 0;
+    color: #4CAF50;
 }
 
 @media screen and (max-width: 768px) {
