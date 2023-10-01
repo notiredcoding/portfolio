@@ -1,3 +1,44 @@
+//Updatable For Border Bottom Nav Link
+const navLinks = document.querySelectorAll('nav a');
+const sections = document.querySelectorAll('section');
+
+function setActiveLink(link) {
+  navLinks.forEach((navLink) => {
+    navLink.classList.remove('active');
+  });
+  link.classList.add('active');
+}
+
+function setActiveNavLink() {
+  sections.forEach((section) => {
+    const rect = section.getBoundingClientRect();
+    if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+      const link = document.querySelector(`nav a[href="#${section.id}"]`);
+      if (link) {
+        setActiveLink(link);
+      }
+    }
+  });
+}
+
+navLinks.forEach((link) => {
+  link.addEventListener('click', function (e) {
+    e.preventDefault();
+    const targetSection = document.querySelector(this.getAttribute('href'));
+    if (targetSection) {
+      window.scrollTo({
+        top: targetSection.offsetTop,
+        behavior: 'smooth',
+      });
+      setActiveLink(this);
+    }
+  });
+});
+
+window.addEventListener('scroll', setActiveNavLink);
+window.addEventListener('load', setActiveNavLink);
+
+
 //Responsive Menu
 const bar = document.querySelector('.bar');
 const nav = document.getElementById('nav');
