@@ -1,0 +1,19 @@
+:root {
+  --cta-color: #FF6600;
+  --primary-color: #007FFF;
+  --hover-color: #0066cc;
+  --secondary-color: #ccc;
+} 
+
+.section {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 500px;
+}
+
+@media screen and (max-width: 768px) {
+  .section {
+    flex-direction: column;
+  }
+}
