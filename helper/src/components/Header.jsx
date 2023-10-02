@@ -9,7 +9,7 @@ const Header = () => {
         
         <header>
             <div className="logo">HelperDinuwi</div>
-            <a href="https:/dinuwifirst.biz.id">Back To Homepage</a>
+            <a href="/">Back To Homepage</a>
         </header>
         
         

@@ -1,3 +1,10 @@
+:root {
+    --cta-color: #FF6600;
+    --primary-color: #007FFF;
+    --hover-color: #0066cc;
+    --secondary-color: #ccc;
+} 
+
 * {
     margin: 0;
     padding: 0;
@@ -8,7 +15,7 @@
 header {
     min-height: 80px;
     padding: 10px 30px;
-    background: #000;
+    background: #007FFF;
     font-size: 30px;
     color: white;
     display: flex;
@@ -23,5 +30,11 @@ header a {
 }
 
 header a:hover {
-    color: blue;
+    color: #0066CC;
+}
+
+@media screen and (max-width: 786px) {
+    header {
+        font-size: 20px;
+    }
 }
